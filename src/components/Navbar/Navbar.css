@@ -1,0 +1,29 @@
+.navbar {
+  display: block;
+  min-height: 50px;
+  background: var(--blue-dark-color);
+  border-bottom-left-radius: calc(var(--radius) - 15px);
+  border-bottom-right-radius: calc(var(--radius) - 15px);
+}
+
+.navbar-brand {
+  text-align: center;
+  display: inline-block;
+  width: 87%;
+}
+
+.navbar-brand__text {
+  color: var(--gray-color);
+}
+
+@media screen and (max-width: 640px){
+  .navbar-brand {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .navbar-brand {
+    width: 70%;
+  }
+}

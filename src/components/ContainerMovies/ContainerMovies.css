@@ -1,0 +1,18 @@
+.container_movies {
+  max-width: 1000px;
+  margin: 40px auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title-result {
+  color: var(--gray-color);
+}
+
+.title-result__good {
+  flex-basis: 100%;
+  margin-left: 5%;
+  margin-bottom: 25px;
+}

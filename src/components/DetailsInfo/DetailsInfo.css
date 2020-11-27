@@ -1,0 +1,35 @@
+.details-info {
+  padding: 10px 15px 10px 15px;
+}
+
+.directorOrWriter,
+.genre,
+.sinopsis,
+.awards {
+  color: var(--full-light-color);
+  text-align: left;
+}
+
+.directorOrWriter {
+  color: rgb(231, 231, 231);
+}
+
+.genre {
+  margin: 7px 0 15px 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sinopsis,
+.awards {
+  line-height: 25px;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.container-mini-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

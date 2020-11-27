@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Home = React.lazy(()=> import('./pages/Home'));
+const PageResult = React.lazy(()=> import('./pages/SearchResult'));
+const Details = React.lazy(()=> import('./pages/Details'));
+const Page404 = React.lazy(()=> import('./pages/Page404'));
+
+export default function App () {
+
+  return ( 
+    <Router>
+      <Suspense fallback={<span>.</span>}>
+        <Switch>
+          <Route path='/movie/:id' component={Details} exact/>
+          <Route path='/search/:movie' component={PageResult}/>
+          <Route path='/' component={Home} exact/>
+          <Route component={Page404}/>
+        </Switch>
+      </Suspense>
+    </Router>
+  )
 }
-
-export default App;

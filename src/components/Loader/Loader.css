@@ -1,0 +1,37 @@
+.popcorn{
+  margin: auto;
+  position: absolute;
+  width: 85px;
+  top: 50%; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+}
+
+circle#popcrncirlce {
+  fill: #FFE477;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-animation: rotate 0.8s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+  animation: rotate 0.8s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+}
+
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: translate(0px, 100px);
+  }
+
+  75% {
+    -webkit-transform: translate(0px, 125px);
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: translate(0px, 100px);
+  }
+
+  75% {
+    transform: translate(0px, 125px);
+  }
+}

@@ -1,0 +1,37 @@
+.container-error-404 {
+  max-width: 1000px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  color: var(--light-color);
+}
+
+.not-found__title {
+  color: var(--gray-color);
+}
+
+.btn--redirect {
+  border: 1px solid var(--light-color);
+  border-radius: calc(var(--radius) - 25px);
+  color: var(--blue-dark-color) !important;
+  width: 200px;
+  padding: 8px;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 17px;
+  user-select: none;
+}
+
+.btn--redirect:hover {
+  box-shadow: 
+  1px 1px var(--blue-dark-color),
+  2px 2px var(--blue-dark-color),
+  3px 3px var(--blue-dark-color);
+}
+
+.image-404 {
+  width: 600px;
+}
