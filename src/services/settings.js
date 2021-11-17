@@ -1,3 +1,4 @@
-const API_URL = 'https://www.omdbapi.com/?apikey=b4fdbfb8';
+const { REACT_APP_API_URL, REACT_APP_API_KEY } = process.env;
+const API_URL = `${REACT_APP_API_URL}/?apikey=${REACT_APP_API_KEY}`;
 
 export default API_URL;

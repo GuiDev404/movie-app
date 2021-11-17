@@ -9,7 +9,7 @@ import MovieDetails from '../../components/CardMovieDetails';
 import Navbar from '../../components/Navbar';
 import Loader from '../../components/Loader';
 
-import sanitizeProps from '../../helpers/sanitizeProps';
+import { sanitizeProps } from '../../helpers';
 
 function Details () {
   const { id } = useParams();
@@ -23,7 +23,7 @@ function Details () {
   useEffect(() => {
     getMovieById(id)
       .then(res=> {
-        let validProps = sanitizeProps(res);
+        const validProps = sanitizeProps(res);
 
         setTitle({ 
           description: validProps.Plot, 

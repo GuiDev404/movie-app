@@ -17,7 +17,7 @@ const Loader = () => {
           style={{ enableBackground: "new 0 0 354.461 354.461" }}
           xmlSpace="preserve"
         >
-          <g id="XMLID_484_">
+          <g id="XMLID_484_" height='200'>
             <circle
               id="popcrncirlce"
               className="firstcirle"

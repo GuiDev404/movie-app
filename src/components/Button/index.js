@@ -1,6 +1,6 @@
 import React from 'react';
-import './Button.css'; 
 import { Link } from 'react-router-dom';
+import './Button.css'; 
 
 const Button = ({ styles, txt, withRedirect, path, inlineStyle ,fnEvtClick }) => {
   return withRedirect ? (

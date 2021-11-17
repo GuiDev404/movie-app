@@ -8,6 +8,10 @@
   right: 0;
 }
 
+.popcorn svg {
+  overflow: inherit;
+}
+
 circle#popcrncirlce {
   fill: #FFE477;
   transform-origin: 0 0;

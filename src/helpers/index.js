@@ -1,4 +1,4 @@
-export default {
+export const waitingGifs = {
   alls: [
     "https://media2.giphy.com/media/5YmR3flwyyzzG/giphy.gif",
     "https://media4.giphy.com/media/FRKr3vM1BiCyc/giphy.gif?cid=bef064a8jlksu31wck0rk7fp26b68kox5i26jw3auj1famb3&rid=giphy.gif",
@@ -13,3 +13,30 @@ export default {
   ],
   tvOff: "https://4.bp.blogspot.com/-e8QyWiFOB20/VDh7d7VL9qI/AAAAAAAAFQ0/hKx28r1s7RE/s1600/tvoff.gif",
 };
+
+let colors = [
+  "#c0392b",
+  "#2980b9",
+  "#e67e22",
+  "#f39c12",
+  "#1abc9c",
+  "#bdc3c7",
+  "#8e44ad",
+  "#bdc3c7",
+];
+
+export const numberRandom = (len) => Math.floor(Math.random() * len); 
+
+export const randomColor = ()=> colors[numberRandom(colors.length)]; 
+
+export const sanitizeProps = res => {
+  let props = Object.entries(res);
+  let validProps = props.filter(ele=> ele[1] !== 'N/A');
+  let details = validProps.reduce((acc,ele)=> {
+    let [ key, val ] = ele;
+    acc[key] = val;
+    return acc;
+  } ,{})
+
+  return details;
+}

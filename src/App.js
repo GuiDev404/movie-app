@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
+import Loader from './components/Loader';
 
 const Home = React.lazy(()=> import('./pages/Home'));
 const PageResult = React.lazy(()=> import('./pages/SearchResult'));
@@ -10,12 +11,12 @@ export default function App () {
 
   return ( 
     <Router>
-      <Suspense fallback={<span>.</span>}>
+      <Suspense fallback={<Loader />}>
         <Switch>
-          <Route path='/movie/:id' component={Details} exact/>
-          <Route path='/search/:movie' component={PageResult}/>
-          <Route path='/' component={Home} exact/>
-          <Route component={Page404}/>
+          <Route path='/' component={Home} exact />
+          <Route path='/movie/:id' component={Details}  />
+          <Route path='/search/:movie' component={PageResult} />
+          <Route path='/*' component={Page404}  />
         </Switch>
       </Suspense>
     </Router>
